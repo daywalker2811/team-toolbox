@@ -20,3 +20,7 @@ def run():
         print(f"{c}°C ={f}°F")
     else:
         print("J'ai dit entre 1 et 2 pauvre type !")
+
+
+if __name__ == "__main__":
+    run()
