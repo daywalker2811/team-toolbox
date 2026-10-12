@@ -7,6 +7,7 @@ def show_menu():
 
 def main():
     """Ask the user for a choice until they decide to quit."""
+    print("Welcome to the Team Toolbox! Choose a tool in the menu.")
     while True:
         show_menu()
         choice = input("Your choice: ")
