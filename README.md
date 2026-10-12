@@ -10,4 +10,4 @@ A command-line toolbox built by our team during the Python training.
 python main.py
 
 ## Tools
-(to be completed)
+Doro - 6 Number explorer
