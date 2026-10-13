@@ -3,6 +3,7 @@ def show_menu():
     print()
     print("=== Team Toolbox ===")
     print("0. Quit")
+    print("5. Grade Calculator")
 
 
 def main():
