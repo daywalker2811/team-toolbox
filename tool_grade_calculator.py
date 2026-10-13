@@ -17,8 +17,24 @@ def stats(grades):
     """
     return len(grades), round(sum(grades) / len(grades), 1), min(grades), max(grades)
 
+def get_mention(average: float)->str:
+    """
+    Return :
+        16 or more: Very good
+        14 or more: Good
+        10 or more: Pass
+        below 10: Fail
+    """
+    if average >= 16:
+        return "Very Good !"
+    elif average >= 14:
+        return "Good"
+    elif average >= 10:
+        return "Pass"
+    return "Fail"
 
 if __name__ == '__main__':
     grades = ask_for_grades()
     count, average, lowest, highest = stats(grades)
     print(f"{count} grades", f"average: {average}", f"lowest: {lowest}", f"highest: {highest}", sep=" - ")
+    print(f"Mention: {get_mention(average)}")
