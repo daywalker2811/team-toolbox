@@ -6,8 +6,19 @@ def ask_for_grades():
     grade = input("Enter a grade (empty to stop): ")
     while grade != "":
         if int(grade) >= 0 and int(grade) <= 20:
-            grades.append(grade)
+            grades.append(int(grade))
         grade = input("Enter a grade (empty to stop): ")
     return grades
+
+
+def stats(grades):
+    """
+    Calculate the number of grades, the average note, the lowest and the highest from grades
+    """
+    return len(grades), round(sum(grades) / len(grades), 1), min(grades), max(grades)
+
+
 if __name__ == '__main__':
-    print(ask_for_grades())
+    grades = ask_for_grades()
+    count, average, lowest, highest = stats(grades)
+    print(f"{count} grades", f"average: {average}", f"lowest: {lowest}", f"highest: {highest}", sep=" - ")
